@@ -7,11 +7,26 @@ export class InAppBillingWeb extends WebPlugin implements InAppBillingPlugin {
       name: 'InAppBilling',
       platforms: ['web']
     });
-  }
-
-  async echo(options: { value: string }): Promise<{value: string}> {
+  } 
+  queryPurchases(options: { skuType: import("./definitions").SkuType; }): Promise<{ data: import("./definitions").PurchaseDetail[]; }> {
     console.log('ECHO', options);
-    return options;
+    throw new Error("Method not implemented.");
+  }
+  async consumePurchase(options: { token: String; }): Promise<void> {
+    console.log('ECHO', options);
+    throw new Error("Method not implemented.");
+  }
+  async buy(options: { sku: String; }): Promise<import("./definitions").PurchaseDetail> {
+    console.log('ECHO', options);
+    throw new Error("Method not implemented.");
+  }
+  async getSkuDetails(options: { skus: string[]; skuType: import("./definitions").SkuType; }): Promise<{ data: import("./definitions").SkuDetail[]; }> {
+    console.log('ECHO', options);
+    throw new Error("Method not implemented.");
+  }
+  
+  async initialize(): Promise<void> {
+    throw new Error("Method not implemented.");
   }
 }
 

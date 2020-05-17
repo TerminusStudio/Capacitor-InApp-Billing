@@ -1,5 +1,7 @@
 
   <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="studio.terminus.ionic.cap-inapp.capacitorinappbilling">
+      package="studio.terminus.ionic.cap.inapp.capacitorinappbilling">
+
+    <uses-permission android:name="com.android.vending.BILLING" />
   </manifest>
   
